@@ -1,0 +1,56 @@
+
+**** 02/18/21 13:52:03 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-test3"  [ E:\LabADE\pg3-SCHEMATIC1-test3.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pg3-SCHEMATIC1-test3.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrcadLite\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 0.01m 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\pg3-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING pg3-SCHEMATIC1.net ****
+* source PG3
+V_V3         M_UN0001 M_UN0002 12Vdc
+X_U1         N00568 N00608 N01066 N01029 N01147 uA741
+R_R1         0 N01221  1k  
+V_V4         M_UN0003 M_UN0004 12Vdc
+V_V7         N00608 0  
++SIN 0 10V 50Hz 0 0 0
+X_U2         N00608 N00728 N00819 N00765 N01184 uA741
+V_V5         N00568 0 3Vdc
+V_V6         N00728 0 3Vdc
+D_D1         N01147 N01221 D1N4002 
+D_D2         N01184 N01221 D1N4002 
+V_V1         0 N01029 12Vdc
+V_V2         0 N00765 12Vdc
+
+**** RESUMING pg3-SCHEMATIC1-test3.sim.cir ****
+.END
+
+ERROR -- Less than 2 connections at node M_UN0001
+ERROR -- Less than 2 connections at node M_UN0002
+ERROR -- Less than 2 connections at node M_UN0003
+ERROR -- Less than 2 connections at node M_UN0004
+ERROR -- Node M_UN0001 is floating
+ERROR -- Node M_UN0002 is floating
+ERROR -- Node M_UN0003 is floating
+ERROR -- Node M_UN0004 is floating

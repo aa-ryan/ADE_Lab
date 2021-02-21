@@ -1,0 +1,46 @@
+
+**** 02/18/21 13:36:08 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-test2"  [ E:\LabADE\pg2-SCHEMATIC1-test2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pg2-SCHEMATIC1-test2.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrcadLite\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 4m 0 0.01m 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\pg2-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING pg2-SCHEMATIC1.net ****
+* source PG2
+C_C1         0 N00467  0.1u  
+X_U1         N00605 N00467 N00376 N00413 N00669 uA741
+V_V1         N00376 0 12Vdc
+R_R1         N00467 N00669  1k  
+V_V2         0 N00413 12Vdc
+R_R1         N00605 0  10k  
+$
+ERROR -- Name "R_R1" is defined more than once
+R_R1         N00605 N00669  10k  
+$
+ERROR -- Name "R_R1" is defined more than once
+
+**** RESUMING pg2-SCHEMATIC1-test2.sim.cir ****
+.END
+
